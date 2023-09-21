@@ -57,7 +57,7 @@ document.addEventListener('touchstart', jump);
 
 if(window.innerWidth < 768){ 
 window.addEventListener("orientationchange", function() {
-    if (window.orientation === 90 || window.orientation === -90) {
+    if (window.screen.orientation === 90 || window.screen.orientation === -90) {
       alert("O dispositivo está em modo paisagem, Clique em 'OK' para continuar !");
       // Execute ações específicas para a orientação paisagem
     } else {
