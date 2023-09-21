@@ -58,10 +58,10 @@ document.addEventListener('touchstart', jump);
 if(window.innerWidth < 768){ 
 window.addEventListener("orientationchange", function() {
     if (window.screen.orientation === 90 || window.screen.orientation === -90) {
-      alert("O dispositivo está em modo paisagem, Clique em 'OK' para continuar !");
+      alert("O dispositivo está em modo retrato, Por Favor vire a tela para jogar.");
       // Execute ações específicas para a orientação paisagem
     } else {
-      alert("O dispositivo está em modo retrato, Por Favor vire a tela para jogar.");
+      alert("O dispositivo está em modo paisagem, Clique em 'OK' para continuar !");
       // Execute ações específicas para a orientação retrato
     }
   });
