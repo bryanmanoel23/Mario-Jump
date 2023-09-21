@@ -54,6 +54,8 @@ const loop = setInterval(() => {
 document.addEventListener('keydown', jump);
 document.addEventListener('touchstart', jump);
 
+
+if(window.innerWidth < 768){ 
 window.addEventListener("orientationchange", function() {
     if (window.orientation === 90 || window.orientation === -90) {
       alert("O dispositivo está em modo paisagem, Clique em 'OK' para continuar !");
@@ -63,4 +65,4 @@ window.addEventListener("orientationchange", function() {
       // Execute ações específicas para a orientação retrato
     }
   });
-  
+}
