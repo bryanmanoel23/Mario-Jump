@@ -1,5 +1,10 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const test = document.querySelector('.test');
+
+function atualizapagina() {
+  location.reload()
+}
 
 const jump = () =>{
     mario.classList.add('jump');
@@ -32,6 +37,14 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '50px';
 
         clearInterval(loop)
+
+        if(test.classList.contains('test')) {
+          test.classList.remove('test')
+          test.classList.add('atualiza')
+        }
+        
+
+        
     }
 
   
