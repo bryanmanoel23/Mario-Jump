@@ -13,22 +13,8 @@
         overflow: hidden;
         background: linear-gradient(#87CEEB, #E0F6FF);
     }
-    .loucura {
-        size:40px;
-        width:120px;
-        height:120px;
-        position:absolute;
-        bottom:0;
-        animation: doganimation linear 2.2s infinite; 
-    }
-    .seinao {   
-        size:40px;
-        width:110px;
-        height:110px;
-        position:absolute;
-        bottom: 0;
-        animation: seinaoAnimation linear 2.8s infinite  ;
-    }
+
+    
     .pipe{
         position: absolute;
         top: 376px;
@@ -64,23 +50,7 @@
 
     }
 
-    @keyframes seinaoAnimation {
-        from {
-            right: -80px;
-        }
-        to {
-            right: 100%;
-        }
-    }
-
-    @keyframes doganimation {
-        from {
-            right:-80px;
-        }
-        to {
-            right:100%;
-        }
-    }
+   
 
     @keyframes jump {
 
