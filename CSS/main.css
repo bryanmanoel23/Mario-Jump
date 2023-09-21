@@ -4,6 +4,26 @@
         box-sizing: border-box;
     }
 
+    .test {
+        visibility: hidden;
+    }
+
+    .atualiza {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        padding:35px;
+        border-radius: 8px;
+        border:1px solid black;
+        background:white;
+    }
+
+    .reload {
+        width:25px;
+        height:25px;
+    }
+
     .game-board {
         width: 100%;
         height: 500px;
