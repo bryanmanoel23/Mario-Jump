@@ -15,13 +15,15 @@
         transform:translate(-50%,-50%);
         padding:35px;
         border-radius: 8px;
-        border:1px solid black;
-        background:white;
+        border:2px solid white;
+        box-shadow: 3px 3px 3px black;
+        background:rgb(43, 39, 39);
     }
-
+    
     .reload {
         width:25px;
         height:25px;
+        color:white;
     }
 
     .game-board {
