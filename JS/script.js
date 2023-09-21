@@ -93,6 +93,7 @@ const loop = setInterval(() => {
 } ,10)
 //adiciona a tecla para pular 
 document.addEventListener('keydown', jump);
+document.addEventListener('touchstart', jump);
 
 window.addEventListener("orientationchange", function() {
     if (window.orientation === 90 || window.orientation === -90) {
