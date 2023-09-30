@@ -119,6 +119,22 @@
              /* Ajuste a altura para a orientação paisagem */
         }
       }
+
+/* Estilos para dispositivos móveis com tela no modo retrato */
+@media (max-width: 767px) and (orientation: portrait) {
+    .game-board {
+        height: 300px; /* Ajuste a altura conforme necessário para dispositivos móveis em modo retrato */
+        border-bottom: 10px solid rgb(35, 160, 35); /* Reduza a espessura da borda inferior */
+    }
+}
+
+/* Estilos para dispositivos maiores ou dispositivos móveis no modo paisagem */
+@media (min-width: 768px) {
+    .game-board {
+        height: 500px;
+        border-bottom: 15px solid rgb(35, 160, 35);
+    }
+}
     
    
       
