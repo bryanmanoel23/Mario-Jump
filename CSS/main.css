@@ -1,42 +1,128 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.test {
+    visibility: hidden;
+}
+
+.atualiza {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:35px;
+    border-radius: 8px;
+    border:2px solid white;
+    box-shadow: 3px 3px 3px black;
+    background:rgb(43, 39, 39);
+}
+
+.reload {
+    width:25px;
+    height:25px;
+    color:white;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom:15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+
+.pipe{
+    position: absolute;
+    top: 376px;
+    width: 140px;
+    animation: pipe-animation 1.6s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.jump {
+    animation: jump 600ms ease-out ;
+}
+
+.clouds {
+    position: absolute;
+    width: 600px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
     }
 
-    .test {
-        visibility: hidden;
+}
+
+
+
+@keyframes jump {
+
+    0% {
+        bottom: 0px;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0px;
     }
 
-    .atualiza {
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%);
-        padding:35px;
-        border-radius: 8px;
-        border:2px solid white;
-        box-shadow: 3px 3px 3px black;
-        background:rgb(43, 39, 39);
-    }
-    
-    .reload {
-        width:25px;
-        height:25px;
-        color:white;
-    }
+}
 
+@keyframes clouds-animation {
+    from {
+        right:-600px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
+@media (orientation: portrait) {
     .game-board {
         width: 100%;
         height: 500px;
-        border-bottom:15px solid rgb(35, 160, 35);
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(#87CEEB, #E0F6FF);
     }
+    .pipe{
+        position: absolute;
+        top: 376px;
+        width: 140px;
+        animation: pipe-animation 1.6s infinite linear;
+    }
+}
 
-    
+/* Estilos para orientação paisagem (horizontal) */
+@media (orientation: landscape) {
+    .game-board {
+        width: 100%;
+        /* Ajuste a altura para a orientação paisagem */
+    }
     .pipe{
         position: absolute;
         top: 376px;
@@ -44,98 +130,21 @@
         animation: pipe-animation 1.6s infinite linear;
     }
 
-    .mario {
-        width: 150px;
-        position: absolute;
-        bottom: 0;
-
-    }
-
-    .jump {
-        animation: jump 500ms ease-out ;
-    }
-
-    .clouds {
-        position: absolute;
-        width: 600px;
-        animation: clouds-animation 20s infinite linear;
-    }
-
-    @keyframes pipe-animation {
-
-        from {
-            right: -80px;
-        }
-        to {
-            right: 100%;
-        }
-
-    }
-
-   
-
-    @keyframes jump {
-
-        0% {
-            bottom: 0px;
-        }
-        40% {
-            bottom: 180px;
-        }
-        50% {
-            bottom: 180px;
-        }
-        60% {
-            bottom: 180px;
-        }
-        100% {
-            bottom: 0px;
-        }
-
-    }
-
-    @keyframes clouds-animation {
-        from {
-            right:-600px;
-        }
-        to {
-            right: 100%;
-        }
-    }
-
-   
-    /* Estilos para orientação retrato (vertical) */
-    @media (orientation: portrait) {
-        .game-board {
-          width: 100%;
-          height: 500px;
-        }
-      }
-      
-      /* Estilos para orientação paisagem (horizontal) */
-      @media (orientation: landscape) {
-        .game-board {
-          width: 100%;
-             /* Ajuste a altura para a orientação paisagem */
-        }
-      }
+}
 
 /* Estilos para dispositivos móveis com tela no modo retrato */
 @media (max-width: 767px) and (orientation: portrait) {
     .game-board {
-        height: 300px; /* Ajuste a altura conforme necessário para dispositivos móveis em modo retrato */
-        border-bottom: 10px solid rgb(35, 160, 35); /* Reduza a espessura da borda inferior */
+        height: 300px;
+        border-bottom: 10px solid rgb(35, 160, 35);
+        position: relative;
+    }
+    .pipe{
+        position: absolute;
+        top: 180px;
+        width: 140px;
+        animation: pipe-animation 1.6s infinite linear;
     }
 }
 
-/* Estilos para dispositivos maiores ou dispositivos móveis no modo paisagem */
-@media (min-width: 768px) {
-    .game-board {
-        height: 500px;
-        border-bottom: 15px solid rgb(35, 160, 35);
-    }
-}
-    
-   
-      
-  
+
