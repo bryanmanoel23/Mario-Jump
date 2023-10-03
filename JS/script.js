@@ -11,7 +11,7 @@ const jump = () =>{
 
     setTimeout (()=>{
         mario.classList.remove('jump');
-    },500);
+    },600);
 }
 
 const loop = setInterval(() => {
@@ -23,7 +23,7 @@ const loop = setInterval(() => {
 
     
     //validação pipe
-    if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
+    if(pipePosition <= 100 && pipePosition > 0 && marioPosition < 70) {
 
         
         pipe.style.animation = 'none';
@@ -55,14 +55,3 @@ document.addEventListener('keydown', jump);
 document.addEventListener('touchstart', jump);
 
 
-if(window.innerWidth < 768){ 
-window.addEventListener("orientationchange", function() {
-    if (window.screen.orientation === 90 || window.screen.orientation === -90) {
-      alert("O dispositivo está em modo retrato, Por Favor vire a tela para jogar.");
-      // Execute ações específicas para a orientação paisagem
-    } else {
-      alert("O dispositivo está em modo paisagem, Clique em 'OK' para continuar !");
-      // Execute ações específicas para a orientação retrato
-    }
-  });
-}
